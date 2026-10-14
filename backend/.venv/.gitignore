@@ -1,0 +1,15 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+backend/.env
+
+# Python virtual environment and cache
+backend/.venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Build output
+dist/
