@@ -19,6 +19,7 @@ app = FastAPI(
 )
 
 # Allow the local React/Vite frontend to call this API.
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -26,6 +27,8 @@ app.add_middleware(
         "http://127.0.0.1:5173",
         "http://localhost:5174",
         "http://127.0.0.1:5174",
+        "https://aura-voice-agent-alpha.vercel.app",
+        "https://aura-voice-agent-51l1dpgv6-sumitpandeyji9-2462.vercel.app",
     ],
     allow_credentials=False,
     allow_methods=["GET", "POST", "OPTIONS"],
