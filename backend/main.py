@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from groq import Groq
 from pydantic import BaseModel, Field
 
-# Load secrets from backend/.env
+# backend/.env
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
 app = FastAPI(
@@ -35,7 +35,7 @@ app.add_middleware(
     allow_headers=["Content-Type", "Authorization"],
 )
 
-# Assessment-provided mock order database.
+# mock order database.
 ORDERS = {
     "ORD-101": {
         "order_id": "ORD-101",
